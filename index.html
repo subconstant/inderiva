@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  	<title>În Derivă</title>
+
+  	<meta charset="UTF-8" />
+
+  	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  	<meta name="description" content="" />
+
+ 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+ 	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/oscilloscope@1.x"></script>
+
+  	<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body class="align-items-center">
+
+	<img class="main_img" src="img/logo.png"/>
+
+	<button class="about_button modal-target">Despre proiect</button>
+
+  	<div class="d-flex justify-content-center align-items-center flex-wrap main_sunete">
+			<a class="sound_button" id="sb1" onclick="play(snd1,'sb1')" href="javascript:void(0);"></a>
+			<a class="sound_button" id="sb2" onclick="play(snd2, 'sb2')" href="javascript:void(0);"></a>
+			<a class="sound_button" id="sb3"  onclick="play(snd3, 'sb3')" href="javascript:void(0);"></a>
+	</div>
+
+	<p class="subtext">Atingeți una dintre imagini<br>pentru a asculta.</p>
+
+	<div id="modal" class="modal">
+		<span id="modal-close" class="modal-close">&times;</span>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec volutpat ipsum, quis consectetur nibh. Nam dictum, erat at feugiat tristique, ex urna rhoncus libero, sit amet aliquam erat neque eu ipsum. Phasellus euismod blandit sem, ac fringilla enim gravida eu. Sed vel tortor suscipit, auctor metus vitae, auctor ipsum. Donec pellentesque pharetra elit, id pharetra tortor malesuada non. Morbi molestie purus vel quam semper consequat. Aliquam vel quam non lectus ultrices efficitur ut vitae odio. Praesent pellentesque nec mauris sit amet aliquam. Nulla erat ex, dapibus venenatis felis vel, sollicitudin tristique nunc. Nulla eu neque dui. Mauris finibus placerat enim vel congue. In mattis ultrices velit, ut auctor massa.
+
+			Phasellus eleifend justo vel ligula dignissim tincidunt. Nulla sagittis id nunc et vehicula. Quisque magna diam, suscipit id arcu eget, gravida maximus quam. Fusce bibendum varius nisi, eget facilisis dui gravida nec. Aliquam porta tortor eu massa sagittis, vitae posuere ligula euismod. Vestibulum vestibulum eleifend tortor a malesuada. Etiam eu ultrices eros. Curabitur tempus lorem eu maximus vestibulum. Nulla suscipit a augue posuere posuere. Aliquam vitae felis feugiat, hendrerit enim convallis, posuere risus. 
+
+		</p>
+		<br><br>
+	</div>
+
+	<script>
+
+
+
+		var snd1 = new Audio('snd/manu-converted.mp3');
+		var snd2 = new Audio('snd/andreea-converted.mp3');
+		var snd3 = new Audio('snd/andrei-converted.mp3');
+
+		function stop() {
+ 			document.getElementById("sb1").style.backgroundImage = "url('img/obj1_1.jpg')";
+ 			document.getElementById("sb2").style.backgroundImage = "url('img/obj2_1.jpg')";
+ 			document.getElementById("sb3").style.backgroundImage = "url('img/obj3_1.jpg')";
+
+ 			snd1.pause();
+ 			snd2.pause();
+ 			snd3.pause();
+		}
+		
+		function play(x,y) {
+			snd1.currentTime = 0;
+			snd2.currentTime = 0;
+			snd3.currentTime = 0;
+			stop();
+			switch(y) {
+				case 'sb1':
+					document.getElementById("sb1").style.backgroundImage = "url('img/obj1_2.jpg')";
+					break;
+				case 'sb2':
+					document.getElementById("sb2").style.backgroundImage = "url('img/obj2_2.jpg')";
+					break;
+				case 'sb3':
+					document.getElementById("sb3").style.backgroundImage = "url('img/obj3_2.jpg')";
+					break;
+			} 
+			x.play();
+		}
+
+		var modal = document.getElementById('modal');
+
+		var modalClose = document.getElementById('modal-close');
+			modalClose.addEventListener('click', function() { 
+			modal.style.opacity = "0";
+			modal.style.pointerEvents = "none"
+		});
+
+		document.addEventListener('click', function (e) { 
+			if (e.target.className.indexOf('modal-target') !== -1) {
+				$('body, html, #modal').scrollTop(0);
+				modal.style.opacity = "1";
+				modal.style.pointerEvents = "all"
+			}
+		});
+
+	
+
+	</script>
+
+
+</body>
+
+</html>

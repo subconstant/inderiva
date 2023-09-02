@@ -1,0 +1,250 @@
+html, body {
+    height: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10pt;
+	color: blue;
+	font-weight: bold;
+}
+
+body {
+	text-align: center;
+	padding: 10%;
+	background: url('img/bgwave.png') -50% 0% repeat;
+	background-size: cover;
+	background-repeat: repeat;
+	animation-name: move_bg;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes move_bg {
+	0% { background-position: 0 0; }
+	100% { background-position: -200vh 0; }
+}
+
+@media (min-width: 1024px) {
+	@keyframes move_bg {
+		0% { background-position: 0 -10vh; }
+		100% { background-position: -100vw -10vh; }
+	}
+}
+
+@keyframes fade_anim {
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { display:none; opacity:0; }
+}
+
+@keyframes fade_in {
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes spin {
+	0% { transform: translateX(0%) rotate(0deg) ; }
+	25% { transform: translateX(-5%) rotate(90deg) ; }
+	50% { transform: translateX(0%) rotate(180deg) ; }
+	75% { transform: translateX(5%) rotate(270deg) ; }
+	100% { transform: translateX(0%) rotate(360deg) ; }
+}
+
+@keyframes spin_button {
+	0% { transform: rotate(0deg) ; }
+	25% { transform: rotate(90deg) ; }
+	50% { transform: rotate(180deg) ; }
+	75% { transform: rotate(270deg) ; }
+	100% { transform: rotate(360deg) ; }
+}
+
+
+.main_img {
+	opacity: 0;
+	animation-fill-mode: forwards;
+	max-width: 30vh;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 5%;
+}
+
+.subtext {
+	opacity: 0;
+	animation-fill-mode: forwards;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 5%;
+}
+
+.main_sunete {
+	opacity: 1;
+	/*
+	animation-fill-mode: forwards;*/
+	/*border: 3px solid red;
+	*/
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -10%;
+	bottom: 0;
+	margin:auto;
+	max-width: 20vh;
+	max-height: 60vh;
+	/*background: pink;
+	*/
+}
+
+.sound_button{
+	width: 20vh;
+	height: 20vh;
+	border: 1px solid blue;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 5px;
+	padding: 0;
+	line-height: 0;
+	background-position: center;
+	background-size: contain;
+	transition: background-image 0.5s ease-in-out;
+	-moz-transition: background-image 0.5s ease-in-out;
+}
+
+#sb1 { background-image: url('img/obj1_1.jpg');}
+#sb2 { background-image: url('img/obj2_1.jpg');}
+#sb3 {	background-image: url('img/obj3_1.jpg');}
+
+@media (max-height: 800px) {
+	.main_sunete{
+		animation: 120s spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform-origin: center;
+		max-width: 40vh;
+		max-height: 40vh;
+	}
+	.sound_button{
+		animation: 120s spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-direction: reverse;
+		width: 18vh;
+		height: 18vh;
+	}
+	#sb3 {
+		margin-top: -40px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main_sunete{
+		animation: 120s spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform-origin: center;
+		max-width: 50vh;
+		max-height: 50vh;
+	}
+	.sound_button{
+		animation: 120s spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-direction: reverse;
+		width: 20vh;
+		height: 20vh;
+	}
+	#sb3 {
+		margin-top: -10vh;
+	}
+}
+
+.sound_button img{
+	width: inherit;
+	height: inherit;
+}
+
+.crosshair{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 999;
+	background: pink;
+}
+
+.about_button{
+	opacity: 0;
+	animation: 1s fade_in;
+	animation-fill-mode: forwards;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 12%;
+	background: white;
+	border: 1px solid blue;
+	color: blue;
+	padding: 10px;
+	border-radius: 25px;
+	max-width: 200px;
+	font-weight: bold;
+}
+
+.modal {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	padding: 50px;
+	padding-right: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: blue;
+	color: white;
+	text-align: left;
+	transition: 0.5s;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.modal::-webkit-scrollbar { display: none; }
+.modal {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.modal-close {
+	z-index: 9999;
+	position: absolute;
+	top: 35px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.modal p{
+	text-align: justify;
+}
+
+@media (min-width: 1024px) {
+	.modal p{
+		max-width: 50vw;
+		font-size: 16pt;
+	}
+}
+
+.main_img, .about_button, .subtext{
+	animation: fade_in 1s;
+	animation-fill-mode: forwards;
+}
