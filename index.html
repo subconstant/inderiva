@@ -25,10 +25,9 @@
 <body class="align-items-center">
 
 	<div class="container maincont">
-		
+		<img class="main_img head_logo d-md-none" src="img/logo.png"/>
 		<div class="row">
-		  <div class="col-md d-flex align-items-center justify-content-around" id="soundcol">
-
+		  <div class="col-md d-flex sticky-md-top align-items-center justify-content-evenly" id="soundcol">
 			<div class="ms_contain">
 				<div class="d-flex justify-content-center align-items-center flex-wrap main_sunete">
 					<a class="sound_button" id="sb1" onclick="play(snd1,'sb1')" href="javascript:void(0);"></a>
@@ -37,17 +36,15 @@
 				</div>
 			</div>
 			
-			<p class="subtext">Tap to listen.<br>Please turn up your volume.</p>
+			<span class="subtext">Tap to listen.<br>Please turn up your volume.</span>
 			<br>
 		  </div>
 		  <div class="col-md align-items-center" id="detailcol">
-			<!--<img class="main_img" src="img/logo.png"/>-->
 
 			<div class="details container">
+				<img class="main_img d-none d-md-block" src="img/logo.png"/><br>
 				<!--<div class="row">-->
-					<p class="fs-5">
-						About the project<span style="float:right">↓</span>
-					</p>
+					<i>About the project</i><span style="float:right">↓</span>
 					<hr>
 					<!--<div class="col-lg">-->
 						<p>

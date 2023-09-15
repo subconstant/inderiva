@@ -71,53 +71,6 @@ body {
 #soundcol{
 	padding: 30px;
 	flex-direction: column;
-}
-
-@media (max-width: 500px) {
-	#soundcol{
-		margin-top: 50px;
-	}
-}
-
-#detailcol{
-	max-height: none;
-}
-
-.details{
-	width: inherit;
-	height: inherit;
-	text-align: justify;
-	padding: 5% 5% 200px 0;
-}
-
-@media (max-width: 800px) {
-	.details{ padding: 0 }
-}
-
-.main_img {
-	opacity: 0;
-	animation-fill-mode: forwards;
-	width: 200px;
-	padding: 50px 0 0 0;
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: 5%;*/
-}
-
-.subtext {
-	opacity: 0;
-	animation-fill-mode: forwards;
-	margin: 20px;
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	bottom: 5%;*/
-}
-
-.ms_contain{
 	background: url('img/bgwave.png') -50% 0% repeat;
 	background-repeat: repeat;
 	animation-name: move_bg;
@@ -127,12 +80,76 @@ body {
 	background-size: cover;
 	border: 1px solid blue;
 	border-radius: 50px;
-	padding: 50px;
+	max-height: 60vh;
+	min-height: 500px !important;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+	#soundcol{
+		max-height: none;
+	}
+}
+
+@media (min-width: 768px) {
+	#soundcol{
+		margin: 0 50px 0 50px;
+	}
+}
+
+
+#detailcol{
+	max-height: none;
+}
+
+.details{
+	width: inherit;
+	height: inherit;
+	text-align: justify;
+	padding: 0 5% 200px 0;
+}
+
+@media (max-width: 800px) {
+	.details{ padding: 0 }
+}
+
+.main_img {
+	opacity: 0;
+	animation-fill-mode: forwards;
+	max-width: 150px;
+	/*position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 5%;*/
+}
+
+.head_logo{ 
+	margin: 40px;
+	width: 50vw;
+}
+
+@media (max-width: 417px) { .head_logo{ margin: 0 0 20px 0 } }
+
+.subtext {
+	opacity: 0;
+	animation-fill-mode: forwards;
+	font-size: 10pt;
+	margin-top: 30px;
+	/*position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 5%;*/
+}
+
+.ms_contain{
+	
 }
 
 .main_sunete {
 	opacity: 1;
-	
+	margin-top: 6%;
 	/*
 	animation-fill-mode: forwards;*/
 	/*border: 3px solid red;
@@ -166,28 +183,31 @@ body {
 #sb2 { background-image: url('img/obj2_1.jpg');}
 #sb3 {	background-image: url('img/obj3_1.jpg');}
 
-@media (min-height: 800px) {
-	.main_sunete{
-		animation: 120s spin;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		transform-origin: center;
-		max-width: 40vh;
-		max-height: 40vh;
-	}
-	.sound_button{
-		animation: 120s spin;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-direction: reverse;
-		width: 18vh;
-		height: 18vh;
-	}
-	#sb3 {
-		margin-top: -40px;
+@media (min-height: 600px) {
+	@media (min-width: 800px) {
+		.main_sunete{
+			animation: 120s spin;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			transform-origin: center;
+			width: 40vh;
+			height: 40vh;
+		}
+		.sound_button{
+			animation: 120s spin;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-direction: reverse;
+			width: 18vh;
+			height: 18vh;
+		}
+		#sb3 {
+			margin-top: -40px;
+		}
 	}
 }
 
+/*
 @media (min-width: 800px) {
 	.main_sunete{
 		animation: 120s spin;
@@ -208,7 +228,7 @@ body {
 	#sb3 {
 		margin-top: -10vh;
 	}
-}
+}*/
 
 .sound_button img{
 	width: inherit;
