@@ -80,7 +80,7 @@ body {
 	border: 1px solid blue;
 	border-radius: 50px;
 	margin: 2%;
-	height: 90vh;
+	height: 80vh;
 	-webkit-position: sticky;
 	position: sticky !important;
 }
@@ -92,7 +92,6 @@ body {
 .details{
 	width: inherit;
 	height: inherit;
-	overflow: scroll;
 	text-align: justify;
 	padding: 7%;
 }
