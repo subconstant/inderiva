@@ -81,8 +81,6 @@ body {
 	border-radius: 50px;
 	margin: 2%;
 	height: 80vh;
-	-webkit-position: sticky;
-	position: sticky !important;
 }
 
 #detailcol{
