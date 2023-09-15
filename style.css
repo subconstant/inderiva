@@ -1,27 +1,21 @@
 html, body {
     height: 100%;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10pt;
 	color: blue;
 	
 }
 
 body {
 	text-align: center;
-	
-	background: url('img/bgwave.png') -50% 0% repeat;
-	background-repeat: repeat;
-	animation-name: move_bg;
-	animation-duration: 60s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	background-size: cover;
 }
 
 @media (min-width: 1024px) {
 	body{
-		border: 1px solid blue;
-		border-radius: 50px;
+		
+	}
+
+	#detailcol{
+
 	}
 }
 
@@ -64,26 +58,64 @@ body {
 	100% { transform: rotate(360deg) ; }
 }
 
+.maincont{
+	max-width: 100vw;
+}
+
+
+.col-md {
+	max-height: 100vh;
+	max-width: 96vw;
+}
+
+#soundcol{
+	background: url('img/bgwave.png') -50% 0% repeat;
+	background-repeat: repeat;
+	animation-name: move_bg;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	background-size: cover;
+	flex-direction: column;
+	border: 1px solid blue;
+	border-radius: 50px;
+	margin: 2%;
+	height: 90vh;
+	-webkit-position: sticky;
+	position: sticky !important;
+}
+
+#detailcol{
+	max-height: none;
+}
+
+.details{
+	width: inherit;
+	height: inherit;
+	overflow: scroll;
+	text-align: justify;
+	padding: 7%;
+}
 
 .main_img {
 	opacity: 0;
 	animation-fill-mode: forwards;
 	max-width: 30vh;
-	position: absolute;
+	/*position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 5%;
+	top: 5%;*/
 }
 
 .subtext {
 	opacity: 0;
 	animation-fill-mode: forwards;
-	position: absolute;
+	/*position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
-	bottom: 5%;
+	bottom: 5%;*/
 }
 
 .main_sunete {
@@ -91,15 +123,13 @@ body {
 	/*
 	animation-fill-mode: forwards;*/
 	/*border: 3px solid red;
-	*/
+	
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: -10%;
 	bottom: 0;
-	margin:auto;
-	max-width: 20vh;
-	max-height: 60vh;
+	margin:auto;*/
 	/*background: pink;
 	*/
 }
@@ -145,22 +175,22 @@ body {
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
 	.main_sunete{
 		animation: 120s spin;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		transform-origin: center;
-		max-width: 50vh;
-		max-height: 50vh;
+		width: 500px;
+		height: 480px;
 	}
 	.sound_button{
 		animation: 120s spin;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-direction: reverse;
-		width: 20vh;
-		height: 20vh;
+		width: 200px;
+		height: 200px;
 	}
 	#sb3 {
 		margin-top: -10vh;
@@ -270,8 +300,4 @@ body {
 .main_img, .about_button, .subtext{
 	animation: fade_in 1s;
 	animation-fill-mode: forwards;
-}
-
-hr {
-	max-width: 50vw;
 }
