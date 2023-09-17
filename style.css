@@ -9,15 +9,10 @@ body {
 	text-align: center;
 }
 
-@media (min-width: 1024px) {
-	body{
-		
-	}
-
-	#detailcol{
-
-	}
-}
+/*@media (min-width: 1024px) {
+	body{}
+	#detailcol{}
+}*/
 
 @keyframes move_bg {
 	0% { background-position: 0 0; }
@@ -117,14 +112,7 @@ body {
 }
 
 .main_img {
-	opacity: 0;
-	animation-fill-mode: forwards;
 	max-width: 150px;
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: 5%;*/
 }
 
 .head_logo{ 
@@ -135,36 +123,19 @@ body {
 @media (max-width: 417px) { .head_logo{ margin: 0 0 20px 0 } }
 
 .subtext {
-	opacity: 0;
 	animation-fill-mode: forwards;
 	font-size: 10pt;
 	margin-top: 30px;
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	bottom: 5%;*/
 }
 
+/*
 .ms_contain{
 	
-}
+}*/
 
 .main_sunete {
 	opacity: 1;
 	margin-top: 6%;
-	/*
-	animation-fill-mode: forwards;*/
-	/*border: 3px solid red;
-	
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -10%;
-	bottom: 0;
-	margin:auto;*/
-	/*background: pink;
-	*/
 }
 
 .sound_button{
@@ -210,29 +181,6 @@ body {
 	}
 }
 
-/*
-@media (min-width: 800px) {
-	.main_sunete{
-		animation: 120s spin;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		transform-origin: center;
-		width: 400px;
-		height: 370px;
-	}
-	.sound_button{
-		animation: 120s spin;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-direction: reverse;
-		width: 150px;
-		height: 150px;
-	}
-	#sb3 {
-		margin-top: -10vh;
-	}
-}*/
-
 .sound_button img{
 	width: inherit;
 	height: inherit;
@@ -252,9 +200,6 @@ body {
 }
 
 .about_button{
-	opacity: 0;
-	animation: 1s fade_in;
-	animation-fill-mode: forwards;
 	position: absolute;
 	background: white;
 	border: 1px solid blue;
@@ -331,9 +276,4 @@ body {
 		max-width: 50vw;
 		font-size: 12pt;
 	}
-}
-
-.main_img, .about_button, .subtext{
-	animation: fade_in 1s;
-	animation-fill-mode: forwards;
 }
