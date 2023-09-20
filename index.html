@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			
-			<span class="subtext"><span id="playtext">Tap to listen</span>.<br>Please turn up your volume.</span>
+			<span class="subtext"><span id="playtext">Apăsați pentru a asculta</span>.<br><span id="TEXT_VOL">Ridicați volumul.</span></span>
 			<br>
 		  </div>
 		  <div class="col-md align-items-center" id="detailcol">
@@ -44,18 +44,16 @@
 			<div class="details container">
 				<img class="main_img d-none d-md-block" src="img/logo.png"/><br>
 				<!--<div class="row">-->
-					<i>About the project</i><span style="float:right">↓</span>
+					<i id="TEXT_ABOUT">Despre proiect</i><span id="langswitch" onclick="switchlang()" style="float:right">EN</span><br><br>
+					<sub id="TEXT_SUN">Proiectul face parte din expoziția de grup “Soarele Albastru, Conversații despre artă, știință și tehnologie” curatoriată de Anja Lückenkemper și găzduită de Muzeul de Artă Timișoara, Galeria L în perioada 26 Septembrie - 30 Noiembrie 2023.</sub>
 					<hr>
 					<!--<div class="col-lg">-->
-						<p>
-							It is not so rare to see projects about climate change or ecology nowadays. So I could say this work is about garbage and no one would bat an eye. Or about sustainable thinking, or about the local water management and the environment. I even imagine a visitor thinking “ah, this is about the many health benefits of clean water in urban ecosystems” and they wouldn't be wrong at all. We could think this climate change business could still work out fine in the end. But let's just consider that, at least for now, we are simply adrift. I propose this as a better option than having something on paper that doesn't really match reality. There is no fixed position because we are all on the move to some random shore, out of space and out of place, heading wherever the current takes us.
+						<p id="TEXT_M">
+							Proiectele despre schimbările climatice sau ecologie sunt destul de populare în zilele noastre. Dacă aș spune că această lucrare este despre gunoi nimeni nu s-ar mira. Sau despre gândirea durabilă, sau despre managementul eficient al apelor locale sau despre mediu. Îmi imaginez deja un vizitator gândindu-se „ah, încă o lucrare despre beneficiile apei curate în ecosistemele urbane”. Și nu ar greși deloc. Am putea crede că problem schimbărilor climatice s-ar putea rezolva într-un final. Dar poate că e mai bine să considerăm că, cel puțin deocamdată, suntem purși simplu în derivă. Aceasta este contra propunerea mea în locul a ceva ce funcționează doar pe hârtie, fără legătură cu realitatea. A fi în derivă înseamnă a accepta că suntem cu toții în mișcare către un țărm întâmplător, în afara spațiului și a locului, îndreptându-ne oriunde ne duce curentul.
 							<br><br>
-							On a sunny day in Timișoara, I walked along the Bega canal and picked up a couple of things that did not look like they belonged there, trash that floated on the water for some time and looked like it was there to stay - unwanted ghosts of a synthetic past. But if this is our ecosystem now, why judge them so harshly?
-						</p>
-					<!--</div>
-					<div class="col-lg">-->
-						<p>
-							These random things turned into protagonists, whom I lended my voice to in order to let them tell the story of their presumed demise, of their turning from something-needed into something-thrown-away-and-forgotten. A bubble tea cup that played a small part in a teenage romance, a plastic bag whose friendship with a little fish proved fatal, a chocolate wrap that covered a schoolboy’s favourite snack... The innocence I put into the writing of these characters is an attempt at shifting the blame of their impact upon the environment towards the bigger structural lack of ecological education of the population and institutions that manage the public space and natural constructed landscape. This mission explains the expansion of the work into the public transport system: over the duration of the exhibition, the sound works are available to listen via QR scan in all the vaporettos offering transportation on the Bega river, thanks to the support of the Timișoara Public Transport Society.
+							Într-o zi însorită petrecută în Timișoara, m-am plimbat de-a lungul canalului Bega și am cules câteva lucruri care nu păreau aparțină locului, gunoaie care au plutit pe apă de ceva vreme și păreau că vor mai rămâne pentru ceva timpacolo - fantome nedorite ale un trecut sintetic. Dar dacă acesta este ecosistemul nostru acum, de ce să judecăm atât de aspru aceste obiecte?
+							<br><br>
+							Aceste gunoaie s-au transformat în protagoniști cărora le-am împrumutat vocea pentru a le permite să spună povestea presupusei lor dispariții, a transformării lor de la ceva-necesar în ceva-aruncat-și-uitat. O cupă pentru bubble tea care a jucat un rol mic într-o poveste de dragoste pentru adolescenți, o pungă de plastic a cărei prietenie cu un peștișor s-a dovedit fatală, o folie de ciocolată care acoperea gustarea preferată a unui școlar... Inocența pe care am pus-o în scrierea acestor personaje este o încercare de a transfera vina impactului acestor obiecte asupra mediului spre lipsa la nivel structurală a educației ecologice a populației și a instituțiilor care gestionează spațiul public și peisajul natural construit. Această misiune explică extinderea lucrării în sistemul de transport public: pe toată durata expoziției, lucrările sonore sunt disponibile pentru ascultare prin scanare unui cod QR disponibil în toate vaporetto-urile care circulă pe râul Bega, datorită sprijinului Societății de Transport Public Timișoara.
 						</p>
 					<!--</div>
 				</div>-->
@@ -63,11 +61,15 @@
 				<i>Larisa Crunțeanu</i>
 				<br><br>
 				<hr>
-					Sound design: <i>Laurențiu Coțac</i><br>
-					Graphic design: <i>Emanuel Ștefan</i><br>
-					Textile design: <i>Corina Mocanu</i><br><br>
+					<span id="TEXT_SD">Design sunet</span>: <i>Laurențiu Coțac</i><br>
+					<span id="TEXT_GD">Design grafica</span>: <i>Emanuel Ștefan</i><br>
+					<span id="TEXT_TD">Design textil</span>: <i>Corina Mocanu</i><br><br>
 
-					Project realized with the support of the Timișoara Public Transport Society.
+					<span id="TEXT_FIN">
+							Proiect realizat cu suportul Societății de Transport Public Timișoara.
+							<br><br>
+							Această creație artistică a fost realizată prin finanțarea Energie! Burse de creație, acordată de Municipiul Timișoara, prin Centrul de Proiecte, în cadrul Programului cultural național „Timișoara - Capitală Europeană a Culturii în anul 2023". Creația nu reprezintä în mod necesar poziția Centrului de Proiecte al Municipiului Timișoara, iar acesta nu este responsabil de conținutul ei sau de modul în care poate fi folosită.
+					</span>
 				<br>
 				
 			</p>
@@ -88,9 +90,64 @@
 		var snd3 = new Audio('snd/comp_3_v3.mp3');
 		var cSound = "";
 
+		var LANG = "RO";
+		var langswitch = document.getElementById("langswitch");
+
+		var EN_VOL = "Please turn up your volume.";
+		var EN_ABOUT = "About the project";
+		var EN_SUN = "This project is part of the group exhibition “Blue Sun. Conversations on art, science and ecology” curated by Anja Lückenkemper and hosted by the Timișoara National Museum of Art, Galeria L, open through September 26 - November 30 2023.";
+		var EN_M = "It is not so rare to see projects about climate change or ecology nowadays. So I could say this work is about garbage and no one would bat an eye. Or about sustainable thinking, or about the local water management and the environment. I even imagine a visitor thinking “ah, this is about the many health benefits of clean water in urban ecosystems” and they wouldn't be wrong at all. We could think this climate change business could still work out fine in the end. But let's just consider that, at least for now, we are simply adrift. I propose this as a better option than having something on paper that doesn't really match reality. There is no fixed position because we are all on the move to some random shore, out of space and out of place, heading wherever the current takes us.<br><br>On a sunny day in Timișoara, I walked along the Bega canal and picked up a couple of things that did not look like they belonged there, trash that floated on the water for some time and looked like it was there to stay - unwanted ghosts of a synthetic past. But if this is our ecosystem now, why judge them so harshly?<br><br>These random things turned into protagonists, whom I lended my voice to in order to let them tell the story of their presumed demise, of their turning from something-needed into something-thrown-away-and-forgotten. A bubble tea cup that played a small part in a teenage romance, a plastic bag whose friendship with a little fish proved fatal, a chocolate wrap that covered a schoolboy’s favourite snack... The innocence I put into the writing of these characters is an attempt at shifting the blame of their impact upon the environment towards the bigger structural lack of ecological education of the population and institutions that manage the public space and natural constructed landscape. This mission explains the expansion of the work into the public transport system: over the duration of the exhibition, the sound works are available to listen via QR scan in all the vaporettos offering transportation on the Bega river, thanks to the support of the Timișoara Public Transport Society.";
+		var EN_SD = "Sound design";
+		var EN_GD = "Graphic design";
+		var EN_TD = "Textile design";
+		var EN_FIN = "This artwork was made possible by funding from Energy! Artistic Creation Grants, granted by the Municipality of Timișoara, through the Project Centre, within the national cultural programme \"Timișoara 2023 – European Capital of Culture\". The creation does not necessarily represent the position of the Timișoara City Projects Centre and it is not responsible for its content or the way it may be used.";
+		
+		var RO_VOL = document.getElementById('TEXT_VOL').innerHTML;
+		var RO_ABOUT = document.getElementById('TEXT_ABOUT').innerHTML;
+		var RO_SUN = document.getElementById('TEXT_SUN').innerHTML;
+		var RO_M = document.getElementById('TEXT_M').innerHTML;
+		var RO_SD = document.getElementById('TEXT_SD').innerHTML;
+		var RO_GD = document.getElementById('TEXT_GD').innerHTML;
+		var RO_TD = document.getElementById('TEXT_TD').innerHTML;
+		var RO_FIN = document.getElementById('TEXT_FIN').innerHTML;
+
+		var TEXTELEM = ['TEXT_VOL', 'TEXT_ABOUT', 'TEXT_SUN', 'TEXT_M', 'TEXT_SD', 'TEXT_GD', 'TEXT_TD', 'TEXT_FIN'];
+
 		ptxt = document.getElementById("playtext");
-		txt1 = String("Tap to listen");
-		txt2 = String("Tap again to stop audio");
+		txt1_en = String("Tap to listen");
+		txt2_en = String("Tap again to stop audio");
+		txt1_ro = String(ptxt.innerHTML);
+		txt2_ro = String("Apăsați din nou pentru a opri sunetul");
+
+		function switchlang(){
+			switch (LANG){
+				case 'RO':
+					LANG = 'EN';
+					for (var x of TEXTELEM){
+						document.getElementById(x).innerHTML = eval('EN_' + x.replace('TEXT_',''));
+					}
+					
+					if (cSound != ""){ ptxt.innerHTML = txt2_en; } else { ptxt.innerHTML = txt1_en; }
+
+					langswitch.innerHTML = 'RO';
+					langswitch.style.background = 'blue';
+					langswitch.style.color = 'white';
+					break;
+
+				case 'EN': 
+					LANG = 'RO';
+					for (var x of TEXTELEM){
+						document.getElementById(x).innerHTML = eval('RO_' + x.replace('TEXT_',''));
+					}
+
+					if (cSound != ""){ ptxt.innerHTML = txt2_ro; } else { ptxt.innerHTML = txt1_ro; }
+
+					langswitch.innerHTML = 'EN';
+					langswitch.style.background = 'white';
+					langswitch.style.color = 'blue';
+					break;
+			}
+		}
 
 		function stop() {
  			document.getElementById("sb1").style.backgroundImage = "url('img/obj1_1.jpg')";
@@ -103,11 +160,26 @@
 		}
 		
 		function play(x,y) {
-			ptxt.innerHTML = txt2;
+			switch (LANG){
+				case 'RO':
+					ptxt.innerHTML = txt2_ro;
+					break;
+				case 'EN':
+					ptxt.innerHTML = txt2_en;
+					break;
+			}
+			
 			if (cSound == x){
 				stop();
 				cSound = "";
-				ptxt.innerHTML = txt1;
+				switch (LANG){
+				case 'RO':
+					ptxt.innerHTML = txt1_ro;
+					break;
+				case 'EN':
+					ptxt.innerHTML = txt1_en;
+					break;
+				}
 			} else {
 				cSound = x;
 				snd1.currentTime = 0;
@@ -131,7 +203,6 @@
 		}
 
 	</script>
-
 
 </body>
 
