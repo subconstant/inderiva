@@ -123,8 +123,12 @@ body {
 
 .subtext {
 	animation-fill-mode: forwards;
-	font-size: 10pt;
+	font-size: 9pt;
 	margin-top: 30px;
+}
+
+#TEXT_SUN{
+	font-size: 9pt;
 }
 
 /*
@@ -192,7 +196,7 @@ body {
 	color: blue;
 	padding: 10px 15px 10px 15px;
 	border-radius: 25px;
-	margin-top: -10px;
+	margin-top: -11px;
 	cursor: pointer;
 	transition: 1s;
 }
