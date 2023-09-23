@@ -114,6 +114,17 @@ body {
 	max-width: 150px;
 }
 
+#t23{
+	max-width: 350px;
+	float: right;
+	top: 50px;
+}
+
+@media (max-width: 417px) {
+	#t23 { width: inherit }
+}
+
+
 .head_logo{ 
 	margin: 40px;
 	width: 50vw;
@@ -200,3 +211,4 @@ body {
 	cursor: pointer;
 	transition: 1s;
 }
+
